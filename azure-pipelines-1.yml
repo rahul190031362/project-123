@@ -1,0 +1,137 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@rahul190031362 
+rahul190031362
+/
+project-123
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+1
+Wiki
+Security
+Insights
+Settings
+project-123/123.py /
+@rahul190031362
+rahul190031362 Create 123.py
+Latest commit 7a345a0 8 days ago
+ History
+ 1 contributor
+93 lines (20 sloc)  470 Bytes
+  
+trigger:
+
+
+
+
+- master
+
+
+
+
+
+pool:
+
+
+
+
+  vmImage: 'ubuntu-latest'
+
+
+
+
+strategy:
+
+
+
+
+  matrix:
+
+
+
+
+    Python27:
+
+
+
+
+      python.version: '2.7'
+
+
+
+
+
+steps:
+
+
+
+
+- task: UsePythonVersion@0
+
+
+
+
+  inputs:
+
+
+
+
+    versionSpec: '$(python.version)'
+
+
+
+
+  displayName: 'Use Python $(python.version)'
+
+
+
+
+- script: python "a1.py"
+
+
+
+
+
+- task: PythonScript@0
+
+
+
+
+  inputs:
+
+
+
+
+    scriptSource: 'inline'
+
+
+
+
+    script: |
+
+      print('Hello world 1')
+
+      print('Hello world 2')
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
